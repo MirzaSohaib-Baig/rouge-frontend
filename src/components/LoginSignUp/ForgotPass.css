@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fde7ef; /* light pink */
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .center-wrapper h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: -16px; /* pulls logo closer to card */
+    text-align: center;
+  }
+  .form-card {
+    
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    
+    
+  }
+
+  .dash-inputs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 15px;
+  }
+  
+  .dash-box {
+    border: none;
+    border-bottom: 2px solid #000;
+    width: 30px;
+    font-size: 24px;
+    text-align: center;
+    background: transparent;
+    outline: none;
+  }
+  
+    .inputs input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    background: transparent;
+  }
+
+ /* Submit Button */
+ .submit-container {
+    margin-bottom: 20px;
+  }
+  
+  .submit-btn {
+    background-color: #a30046;
+    color: white;
+    padding: 12px 0;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  .submit-btn:hover {
+    background-color: #8e003d;
+  }
+  /* Switch Action */
+  .switch-action {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  
+  .switch-action span {
+    color: #a30046;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .switch-msg {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  /* Options Row */
+  .options-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  /* Responsive for small screens */
+  @media screen and (max-width: 480px) {
+    .form-card {
+      padding: 25px 20px;
+    }
+  
+    .submit-btn, .social-btn {
+      font-size: 13px;
+    }
+  }
+  

@@ -1,0 +1,361 @@
+/* App.css - Base Styles */
+body, html, .app {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .desktop-layout {
+    display: flex;
+  }
+  
+  .sidebar, .right-sidebar {
+    padding: 20px;
+    background: #fff;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .sidebar {
+    width: 250px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .right-sidebar {
+    width: 250px;
+    border-left: 1px solid #ddd;
+  }
+  
+  .nav-section, .group-item, .chat-group, .birthday-entry {
+    margin: 10px 0;
+  }
+
+  .group-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0;
+    cursor: pointer;
+  }
+
+  .chat-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0;
+    cursor: pointer;
+  }
+
+  .birthday-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0;
+    cursor: pointer;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 6px 0;
+    cursor: pointer;
+  }
+  
+  .seperator {
+    opacity: 10%;
+    border-bottom: 1px solid #1E1E1E;
+    margin: 0px 0;
+  }
+  
+
+  .logo {
+    width: 100px;
+    height: 80px;
+    margin: 0px 10px 0px 20px;
+    display: flex;
+  }
+
+    .logo img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin: -10px 20px 0px 0px;
+    }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .top-bar {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    background-color: #fff;
+    border: 4px solid #f3f3f3;
+  }
+  
+  .search-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .search-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: #eee;
+    padding: 8px 400px 8px 18px;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+  
+  .search-bar input {
+    border: none;
+    background: none;
+    margin-left: 8px;
+    width: 100%;
+    outline: none;
+  }
+
+  .rotation {
+    rotate: 180deg;
+  }
+  
+  .gender-btn, .post-btn {
+    padding: 2px 20px;
+    border: 1px solid #CFCFCF;
+    border-radius: 20px;
+    background: transparent;
+    cursor: pointer;
+    color: #A8A8A8;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .user-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .circle-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .post-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .post-input-container {
+    align-items: center;;
+    background: #FFFFFF;
+    padding: 10px 0px 10px 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .post-input input {
+    flex: 1;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 10px;
+    outline: none;
+  }
+
+  .post-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px 0px 0px;
+  }
+
+  .post-functions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .post {
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .post-images {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .post-images img {
+    max-width: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 200px;
+  }
+
+  .post-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .nav-icon {
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 6.3px -2px rgba(0, 0, 0, 0.25);
+  }
+
+  .like {
+    color: #7780BB;
+  }
+
+  .like-count {
+    background-color: #F1F3FF;
+    border-radius: 13px;
+    padding: 3px 20px;
+    margin-left: 10px;
+  }  
+  
+  .count {
+    background-color: #F1F1F1;
+    border-radius: 13px;
+    padding: 3px 20px;
+    margin-left: 10px;
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    color: #666;
+  }
+  
+  .post-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .time {
+    font-size: 12px;
+    color: #999;
+    margin-top: 2px;
+  }
+  
+  .community-section, .birthday-section {
+    margin-bottom: 20px;
+  }
+  
+  .birthday {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  /* AppResponsive.css */
+@media (max-width: 1024px) {
+    .sidebar, .right-sidebar {
+      display: none;
+    }
+  
+    .desktop-layout {
+      flex-direction: column;
+    }
+  
+    .top-bar {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+  
+    .post-input {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .post-icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+  
+    .post-input input {
+      margin: 10px 0;
+    }
+  
+    .post-images {
+      flex-direction: column;
+    }
+  
+    .main-content {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .top-bar .user-info {
+      justify-content: center;
+    }
+  
+    .search-bar input {
+      font-size: 14px;
+    }
+  
+    .post-actions {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .post-images {
+      flex-direction: column;
+    }
+
+    .post-icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+    .post-images img {
+      width: 200px;
+        height: 200px;
+    }
+  }
+  

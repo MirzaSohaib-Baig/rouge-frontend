@@ -1,0 +1,4 @@
+npm start
+npm install react-select
+npm install react-select i18n-iso-countries
+npm install react-router-dom

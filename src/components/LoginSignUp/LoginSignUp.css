@@ -1,0 +1,238 @@
+/* Container for the entire auth section */
+.auth-wrapper {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* Form section styling */
+.auth-form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background-color: #E8D0DC;
+}
+
+/* Image section styling */
+.auth-image-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+/* Logo styling */
+.auth-logo {
+  max-width: 60%;
+  height: auto;
+}
+
+/* Form card styling */
+.form-card {
+  width: 100%;
+  max-width: 320px;
+  background-color: #ffffff;
+  padding: 22px 20px;
+  border-radius: 7px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.07);
+}
+
+/* Header styling */
+.header h2 {
+  margin-bottom: 18px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Input fields container */
+.inputs .input {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 7px 9px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  transition: border 0.2s ease;
+}
+
+.inputs .input:focus-within {
+  border-color: #007bff;
+}
+
+.inputs .input img {
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+}
+
+.inputs .input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 12px;
+  color: #333;
+}
+
+/* Custom select wrapper */
+.custom-select-wrapper {
+  flex: 1;
+}
+
+.react-select-container {
+  width: 100%;
+}
+
+.react-select__control {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-size: 12px;
+}
+
+/* Options row styling */
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: #555;
+}
+
+.checkbox-label input {
+  margin-right: 6px;
+}
+
+.forgot-password a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+/* Submit button styling */
+.submit-container {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 9px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Switch message styling */
+.switch-msg {
+  text-align: center;
+  margin-bottom: 14px;
+  font-size: 11px;
+}
+
+.link-text {
+  color: #007bff;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+/* Divider styling */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 14px 0;
+  color: #999;
+  font-size: 11px;
+}
+
+.divider hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0 6px;
+}
+
+/* Social button styles */
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 7px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.social-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .auth-wrapper {
+    flex-direction: column;
+  }
+
+  .auth-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .auth-form-section {
+    padding: 14px;
+  }
+
+  .form-card {
+    max-width: 92%;
+    padding: 18px 14px;
+  }
+
+  .header h2 {
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    font-size: 12px;
+  }
+
+  .divider {
+    font-size: 10px;
+  }
+
+  .social-btn {
+    font-size: 11px;
+  }
+}
