@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import * as countries from 'i18n-iso-countries';
 import enLocale from 'i18n-iso-countries/langs/en.json';
@@ -28,6 +28,7 @@ const countryOptions = Object.entries(countries.getNames('en', { select: 'offici
 
 const LoginSignUp = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const initialMode = location.state?.mode || "Sign Up";
   const [action, setAction] = useState(initialMode);
   const [selectedCountry, setSelectedCountry] = useState(null);
@@ -61,6 +62,7 @@ const LoginSignUp = () => {
           email: formData.email,
           password: formData.password,
           country: selectedCountry?.label || '',
+          is_active: true,
         });
         console.log('User registered:', response.data);
         alert("Registration successful!");
@@ -68,9 +70,15 @@ const LoginSignUp = () => {
         const response = await axios.post(`http://127.0.0.1:8001/auth/login-jwt/`, {
           email: formData.email,
           password: formData.password,
+          is_active: true
         });
-        console.log('User login:', response.data);
+        console.log('User login:', response.data.data);
         alert("Login successful!");
+        localStorage.setItem("token", response?.data?.data?.access_token);
+        // console.log("Token:", localStorage.getItem("token"));
+        localStorage.setItem("username", response?.data?.data?.username);
+        
+        navigate('/home/feed')
       }
     } catch (error) {
       console.error('API Error:', error.response?.data || error.message);

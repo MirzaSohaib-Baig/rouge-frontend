@@ -23,22 +23,23 @@ import axios from "axios";
 export default function Sidebar() {
     const [groups, setGroups] = useState([]);
 
-    useEffect(() => {
+    // useEffect(() => {
       const fetchGroups = async () => {
         try {
-          const res = await axios.get("http://localhost:8001/api/groups/", {
+          const res = await axios.get("http://127.0.0.1:8001/chat/groups/", {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
           });
+          console.log("Groups fetched:", res.data);
           setGroups(res.data);
         } catch (err) {
           console.error("Failed to fetch groups", err.response?.data || err.message);
         }
       };
   
-      fetchGroups();
-    }, []);
+      // fetchGroups();
+    // }, []);
   return (
     <aside className="sidebar">
       <div className="nav-section">
@@ -59,13 +60,13 @@ export default function Sidebar() {
         <Link><div className="seperator"></div></Link>
       </div>
       <div className="nav-section">
-        <strong>Groups</strong>
+        <strong><button onClick={fetchGroups}>Groups</button></strong>
         <Link><div className="group-item"> <img src={Doglovers} alt="Doglovers"  className="user-avatar"/> <span>Dog Lovers</span></div></Link>
         <Link><div className="group-item"> <img src={Gamerz} alt="Gamerz"  className="user-avatar"/> <span>GamerzZzZ</span></div></Link>
         <Link to="/home/group"><div className="group-item"> <img src={Travel} alt="Travel"  className="user-avatar"/> <span>Travel Girls</span></div></Link>
         <Link><div className="group-item"> <img src={Cat} alt="Cat"  className="user-avatar"/> <span>Cat Memez</span></div></Link>
       </div>
-        {/* <div className="nav-section">
+      {/* <div className="nav-section">
             <strong>Groups</strong>
             {groups.map((group) => (
                 <Link to={`/home/group/${group.id}`} key={group.id}>

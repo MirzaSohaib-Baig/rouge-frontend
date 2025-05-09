@@ -16,7 +16,7 @@ const GroupPage = () => {
     useEffect(() => {
       const fetchGroup = async () => {
         try {
-          const res = await axios.get(`http://localhost:8001/api/groups/${id}/`, {
+          const res = await axios.get(`http://127.0.0.1:8001/chat/group/`, {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
